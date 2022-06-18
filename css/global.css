@@ -1,0 +1,98 @@
+:root {
+  --p1: #8c4aac;
+  --p2: #b98ece;
+  --p3: #c8a5d9;
+  --p4: #3f214d;
+  --c1: #ffffff;
+  --c2: #eeeeee;
+  --c3: #999999;
+  --c4: #141414;
+}
+body {
+  line-height: 1.2;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  color: var(--c3);
+  min-height: 3000px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--c3);
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.title,
+.subtitle {
+  font-size: 3rem;
+}
+.title {
+  max-width: 20ch;
+}
+.subtitle {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 3px solid var(--p1);
+}
+.scrollTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.scrollTop a i {
+  font-size: 3rem;
+}
+
+/* ======================== MEDIA QUERIES ======================== */
+@media (max-width: 1000px) {
+  .scrollTop {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .title,
+  .subtitle {
+    font-size: calc(1.8rem + 1.2vw);
+  }
+  .subtitle {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .container {
+    padding: 2rem 2rem;
+  }
+  p {
+    font-size: calc(0.7rem + 1vw);
+  }
+}
+@media (max-width: 500px) {
+  .title,
+  .subtitle {
+    font-size: calc(1.4rem + 1vw);
+  }
+  .container {
+    padding: 3.5rem 1rem;
+  }
+}

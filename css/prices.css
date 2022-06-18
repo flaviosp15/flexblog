@@ -1,0 +1,129 @@
+.prices {
+  background: var(--c2);
+}
+.prices-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  padding: 3rem;
+  border: 3px solid var(--c1);
+}
+.card-price-title,
+.price {
+  text-align: center;
+  padding: 1rem 0;
+}
+.price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-block: 3px solid var(--c1);
+  color: var(--c4);
+}
+.card-price-title,
+.number {
+  font-size: 2.5rem;
+}
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1.5rem 0;
+}
+.advantage {
+  position: relative;
+}
+.advantage::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 5px;
+  width: 5px;
+  background: #005abb;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.btn {
+  background: transparent;
+  border: 3px solid var(--c4);
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--c2);
+  background: var(--c4);
+}
+@media (max-width: 1040px) {
+  .prices-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .card-price {
+    min-width: 305px;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .card-price {
+    min-width: 280px;
+  }
+}
+@media (max-width: 920px) {
+  .prices-container {
+    align-items: initial;
+    gap: 1rem;
+  }
+  .card-price {
+    justify-content: flex-start;
+  }
+  .card-price:nth-child(3) {
+    order: -1;
+    flex: 0 0 600px;
+  }
+  .card-price:nth-child(1) {
+    order: 1;
+    flex: 1;
+  }
+  .card-price:nth-child(1) .advantages-list {
+    flex: 1;
+  }
+}
+@media (max-width: 700px) {
+  .card-price {
+    min-width: 315px;
+  }
+  .card-price:nth-child(3) {
+    flex: 1;
+  }
+}
+@media (max-width: 500px) {
+  .btn {
+    font-size: calc(1.3rem + 1.5vw);
+  }
+}
+@media (max-width: 350px) {
+  .card-price {
+    min-width: 280px;
+  }
+}

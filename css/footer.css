@@ -1,0 +1,15 @@
+footer {
+  background: var(--p1);
+}
+footer .container {
+  padding-top: 4rem;
+}
+.footer-text {
+  text-align: center;
+  color: var(--p4);
+}
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: calc(0.65rem + 0.8vw);
+  }
+}
